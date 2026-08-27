@@ -1,59 +1,77 @@
+const instagramUrl = "https://www.instagram.com/shop.ayr/";
+
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-10">
-        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+    <footer className="bg-black px-6 py-16 text-white">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-12 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <h2 className="text-lg font-semibold tracking-wide">
-              Jewel by Ayr
+            <h2 className="text-3xl font-light tracking-wide">
+              .Ayr
             </h2>
 
-            <p className="mt-2 text-sm text-gray-500">
-              Jewellery designed to be treasured.
+            <p className="mt-4 max-w-xs text-sm leading-7 text-neutral-400">
+              Handmade jewellery inspired by natural stones and the beauty
+              of Bali.
             </p>
           </div>
 
-          {/* Links */}
-          <div className="flex gap-6 text-sm">
-            <a href="#about" className="hover:opacity-60">
-              About
-            </a>
+          {/* Navigation */}
+          <div>
+            <h3 className="mb-5 text-xs uppercase tracking-[0.3em] text-neutral-400">
+              Explore
+            </h3>
 
-            <a href="#collection" className="hover:opacity-60">
-              Collection
-            </a>
+            <div className="flex flex-col gap-3 text-sm">
+              <a href="#about" className="transition-opacity hover:opacity-60">
+                About
+              </a>
 
-            <a href="#contact" className="hover:opacity-60">
-              Contact
-            </a>
+              <a
+                href="#collection"
+                className="transition-opacity hover:opacity-60"
+              >
+                Collection
+              </a>
+
+              <a
+                href="#instagram"
+                className="transition-opacity hover:opacity-60"
+              >
+                Instagram
+              </a>
+            </div>
           </div>
 
-          {/* Socials */}
-          <div className="flex gap-5 text-sm">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-60"
-            >
-              Instagram
-            </a>
+          {/* Social */}
+          <div>
+            <h3 className="mb-5 text-xs uppercase tracking-[0.3em] text-neutral-400">
+              Connect
+            </h3>
 
             <a
-              href="#"
+              href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-60"
+              className="text-sm transition-opacity hover:opacity-60"
             >
-              Facebook
+              Instagram
             </a>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-10 border-t border-gray-200 pt-6 text-sm text-gray-500">
-          © {new Date().getFullYear()} Jewel by Ayr. All rights reserved.
+        {/* Bottom */}
+        <div className="mt-16 border-t border-neutral-800 pt-6">
+          <div className="flex flex-col justify-between gap-3 text-xs text-neutral-500 md:flex-row">
+            <p>
+              © {new Date().getFullYear()} Jewel by Ayr. All rights reserved.
+            </p>
+
+            <p>
+              Handmade with care.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
